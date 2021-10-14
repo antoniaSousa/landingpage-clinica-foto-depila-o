@@ -139,7 +139,7 @@ body{
 .logo span{
     color: var(--base-color);
 }
-.logo-alt span{
+.logo-alt span {
     color: var(--body-color);
 }
 
