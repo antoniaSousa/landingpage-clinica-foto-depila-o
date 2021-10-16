@@ -32,20 +32,23 @@ function changeHeaderWhenScroll() {
 /* Testemonials */
 
 const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    pagination: {
-        el: '.swiper-pagination'
+    // slidesPerView: 1,
+    // pagination: {
+    //     el: '.swiper-pagination'
+    // },
+    // mousewheel: true,
+    // Keyboard: true,
+    // breakpoints: {
+    //     750: {
+    //         slidesPerView: 2,
+    //         setWrapperSize: true
+    //     }
+    // }
+    autoplay: {
+        delay:2000,
     },
-    mousewheel: true,
-    Keyboard: true,
-    breakpoints: {
-        767: {
-            slidesPerView: 2,
-            setWrapperSize: true
-        }
-    }
 })
-/* Mostrar elementos quandi der scroll na página*/ 
+/* Mostrar elementos quando der scroll na página*/ 
 const scrollReveal = ScrollReveal({
     origin: 'top',
     distance: '30px',
@@ -73,4 +76,34 @@ function backToTop() {
         backToTopButton.classList.remove('show')
     }
 }
+/* Menu atio conforme a seleção visivil da página */
 
+const sections = document.querySelectorAll('main section[id]')
+function activateMenuAtCurrenteSection(){
+    const checkpoint = window.pageYOffset + (window.innerHeight /8) + 4
+
+    for ( const section of sections){
+        const sectionTop = section.offsetTop
+        const sectionHeight = section.offsetHeight
+        const sectionId = section.getAttribute('id')
+
+        const checkpointStart = checkpoint >=sectionTop
+        const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+        if (checkpointStart && checkpointEnd){
+            document
+            .querySelectorAll('nav ul li a[href*=' + sectionId + ']').classList.add('active')
+        }else{ 
+            document
+            .querySelectorAll('nav ul li a[href*=' + sectionId + ']').classList.remove('active')
+        }
+    }
+}
+
+/* When scroll */
+
+window.addEventListener('scroll', function(){
+    changeHeaderWhenScroll()
+    backToTop()
+    activateMenuAtCurrenteSection()
+})
