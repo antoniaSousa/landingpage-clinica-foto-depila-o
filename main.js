@@ -80,7 +80,7 @@ function backToTop() {
 
 const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrenteSection(){
-    const checkpoint = window.pageYOffset + (window.innerHeight /8) + 4
+    const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
     for ( const section of sections){
         const sectionTop = section.offsetTop
@@ -92,10 +92,10 @@ function activateMenuAtCurrenteSection(){
 
         if (checkpointStart && checkpointEnd){
             document
-            .querySelectorAll('nav ul li a[href*=' + sectionId + ']').classList.add('active')
+            .querySelector('nav ul li a[href*=' + sectionId + ']').classList.add('active')
         }else{ 
             document
-            .querySelectorAll('nav ul li a[href*=' + sectionId + ']').classList.remove('active')
+            .querySelector('nav ul li a[href*=' + sectionId + ']').classList.remove('active')
         }
     }
 }
