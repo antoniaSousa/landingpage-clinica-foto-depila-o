@@ -32,21 +32,21 @@ function changeHeaderWhenScroll() {
 /* Testemonials */
 
 const swiper = new Swiper('.swiper-container', {
-    // slidesPerView: 1,
-    // pagination: {
-    //     el: '.swiper-pagination'
-    // },
-    // mousewheel: true,
-    // Keyboard: true,
-    // breakpoints: {
-    //     750: {
-    //         slidesPerView: 2,
-    //         setWrapperSize: true
-    //     }
-    // }
-    autoplay: {
-        delay:2000,
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination'
     },
+    mousewheel: true,
+    Keyboard: true,
+    breakpoints: {
+        750: {
+            slidesPerView: 2,
+            setWrapperSize: true
+        }
+    }
+    // autoplay: {
+    //     delay:2000,
+    // },
 })
 /* Mostrar elementos quando der scroll na página*/ 
 const scrollReveal = ScrollReveal({

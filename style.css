@@ -19,7 +19,7 @@ img {
 :root {
     --header-height: 4.5rem;
     /* colors */
-    --hue: 159;
+    --hue: 150;
     /* hsl color */
     --base-color: hsl(var(--hue) 36% 57%);
     --base-color-second: hsl(var(--hue) 65% 88%);
@@ -199,11 +199,11 @@ nav .menu {
     transition: 0.2s;
 }
 
-nav .menu ul {
+nav.menu ul {
     display: none;
 }
 /* mostrar menu */
-nav .show .menu {
+nav.show .menu {
     opacity: 1;
     visibility: visible;
 
@@ -224,7 +224,7 @@ nav.show .menu ul {
     display: grid;
 }
 
-nav.show ul .grid {
+nav.show ul.grid {
     gap: 4rem;
 }
 
@@ -575,7 +575,7 @@ nav .menu ul li a.title.active{
 
  /* layout */
  main {
-    margin-top: var(--header-height);
+    margin-top: calc (var(--header-height) + 2rem);
 }
 
  /* home*/
