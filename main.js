@@ -1,5 +1,5 @@
 /* Abre e fecha o menu ao clicar no icone hambuger */
-const nav = document.querySelector ('#header nav')
+const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
 for (const element of toggle){
@@ -39,7 +39,7 @@ const swiper = new Swiper('.swiper-container', {
     mousewheel: true,
     Keyboard: true,
     breakpoints: {
-        750: {
+        767: {
             slidesPerView: 2,
             setWrapperSize: true
         }
@@ -58,7 +58,7 @@ const scrollReveal = ScrollReveal({
 })
 
 scrollReveal.reveal(
-    `#home .image, #home .text,
+   ` #home .image, #home .text,
     #about .image, #about .text,
     #services header, #services .card,
     #testimonials header, #testimonials .testimonials
@@ -76,7 +76,7 @@ function backToTop() {
         backToTopButton.classList.remove('show')
     }
 }
-/* Menu atio conforme a seleção visivil da página */
+/* Menu ativo conforme a seleção visivil da página */
 
 const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrenteSection(){

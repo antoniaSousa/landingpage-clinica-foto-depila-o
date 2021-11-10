@@ -199,7 +199,7 @@ nav .menu {
     transition: 0.2s;
 }
 
-nav.menu ul {
+nav .menu ul {
     display: none;
 }
 /* mostrar menu */
@@ -229,7 +229,7 @@ nav.show ul.grid {
 }
 
 /* toggle menu */
-.toggle{
+.toggle {
     color: var(--base-color);
     font-size: 1.5rem;
     cursor: pointer;
@@ -246,7 +246,7 @@ nav .icon-close{
     transition: 0.2s;
 }
 
-nav.show div .icon-close{
+nav.show div.icon-close{
     visibility: visible;
     opacity: 1;
     top: 1.5rem;
@@ -339,7 +339,7 @@ nav.show div .icon-close{
 }
 
 /* ==== Services=====*/
-.cards.grid{
+.cards.grid {
     gap: 1.5rem;
 }
 
